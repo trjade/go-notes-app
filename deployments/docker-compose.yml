@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  auth-service:
+    build: ../auth-service
+    image: ghcr.io/trjade/auth-service:latest
+    ports:
+      - "8081:8081"
+    restart: always
+
+  user-service:
+    build: ../user-service
+    image: ghcr.io/trjade/user-service:latest
+    ports:
+      - "8082:8082"
+    restart: always
+
+  notes-service:
+    build: ../notes-service
+    image: ghcr.io/trjade/notes-service:latest
+    ports:
+      - "8083:8083"
+    restart: always
+
